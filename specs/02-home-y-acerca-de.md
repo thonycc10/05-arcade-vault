@@ -1,6 +1,6 @@
 # SPEC 02 — Home (landing) y Acerca de
 
-> **Status:** Aprobado
+> **Status:** Implementado
 > **Depends on:** SPEC 01
 > **Date:** 2026-11-16
 > **Objective:** Portar a Next.js las pantallas Home y Acerca de/Contacto de `references/templates/home-about/`, moviendo la Biblioteca a `/biblioteca` y dejando el Home en `/`.
