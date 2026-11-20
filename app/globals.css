@@ -1156,6 +1156,19 @@ a { color: inherit; text-decoration: none; }
 .contact-form { background: var(--bg-2); border: 1px solid var(--line); padding: 28px; position: relative; transition: transform 80ms; }
 .contact-form::before { content: ""; position: absolute; inset: 4px; border: 1px dashed rgba(0,245,255,0.15); pointer-events: none; }
 .contact-form.shake { animation: shake 0.4s; }
+/* Honeypot: fuera de pantalla (no display:none, que algunos bots detectan). */
+.contact-form .hp-field { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+/* Error de envío: estilo terminal, magenta neón. */
+.contact-error {
+  margin: 0 0 14px; padding: 10px 12px;
+  background: rgba(255,0,110,0.08); border: 1px solid var(--magenta); border-left-width: 4px;
+  box-shadow: 0 0 14px rgba(255,0,110,0.25);
+  font-family: var(--mono); font-size: 12px; line-height: 1.5; letter-spacing: 0.04em;
+  color: var(--magenta); overflow-wrap: anywhere;
+}
+/* Botón deshabilitado (enviando). */
+.contact-form .btn:disabled { opacity: 0.55; cursor: progress; box-shadow: none; transform: none; }
+.contact-form .btn:disabled:hover { color: inherit; box-shadow: none; }
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   20% { transform: translateX(-6px); } 40% { transform: translateX(6px); }

@@ -1,6 +1,6 @@
 # SPEC 03 — Envío real del formulario de contacto con Resend
 
-> **Status:** Approved
+> **Status:** Implemented
 > **Depends on:** SPEC 02
 > **Date:** 2026-11-16
 > **Objective:** Reemplazar el envío mock del formulario de `/acerca` por un envío real de correo vía Resend usando una Server Action, manteniendo el diseño del template `references/templates/home-about/about.jsx`.
